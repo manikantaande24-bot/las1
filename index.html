@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e8f3ed">
+
+<title>Half Saree & Dhoti Ceremony | Srihasya & Sushruth</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================
+   GLOBAL STYLES
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f4e9;
+    overflow-x: hidden;
+    color: #594333;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    --brown: #75503c;
+    --dark-brown: #573927;
+    --gold: #b68a54;
+    --cream: #fffdf2;
+    --green: #a9c9ba;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    scroll-snap-align: start;
+    background: #e9f2e9;
+}
+
+/* =====================================
+   COMMON LAYERS
+===================================== */
+
+.scene-layer {
+    position: absolute;
+    pointer-events: none;
+}
+
+.scene-bg {
+    position: absolute;
+    inset: -2%;
+    width: 104%;
+    height: 104%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.section-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* =====================================
+   SECTION 1 - HERO
+===================================== */
+
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main background */
+
+.hero-bg {
+    z-index: 0;
+}
+
+/* Top flowers */
+
+.hero-topflowers {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top center;
+}
+
+/* Brother and sister image */
+
+.hero-couple {
+    z-index: 2;
+    position: absolute;
+    bottom: -3%;
+    left: 0;
+    width: 100%;
+    height: 78%;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+/* Edge flowers */
+
+.hero-edgeflowers {
+    z-index: 3;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Hero content */
+
+.hero-content {
+    position: absolute;
+    z-index: 5;
+    top: 13%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 92%;
+    text-align: center;
+}
+
+.hero-small-title {
+    font-size: clamp(10px, 1.5vw, 15px);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #866b50;
+    margin-bottom: 14px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 5.5vw, 66px);
+    line-height: 1.12;
+    color: var(--dark-brown);
+    font-weight: 600;
+    text-shadow: 0 2px 12px rgba(255,255,255,0.45);
+}
+
+.hero-title span {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 0.62em;
+    letter-spacing: 5px;
+    margin-top: 12px;
+    color: #956647;
+}
+
+.hero-names {
+    margin-top: 17px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(19px, 3vw, 32px);
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #76503d;
+}
+
+.hero-divider {
+    width: 75px;
+    height: 1px;
+    background: #b58d60;
+    margin: 17px auto;
+}
+
+.hero-subtitle {
+    color: #80644d;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(15px, 2vw, 21px);
+    letter-spacing: 2px;
+}
+
+/* Scroll indicator */
+
+.scroll-indicator {
+    position: absolute;
+    z-index: 8;
+    bottom: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #75543e;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid #75543e;
+    border-bottom: 1px solid #75543e;
+    transform: rotate(45deg);
+    margin: 9px auto 0;
+    animation: arrowMove 1.8s infinite;
+}
+
+@keyframes arrowMove {
+    0%, 100% {
+        transform: translateY(-4px) rotate(45deg);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(5px) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+/* =====================================
+   SECTION 2 - INVITATION DETAILS
+===================================== */
+
+.details-section {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background */
+
+.details-bg {
+    z-index: 0;
+}
+
+/* Wrapper for card and flowers so they move together */
+
+.details-visuals {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+/* Details card & flowers
+   - Anchored to every edge + margin auto so the box is
+     always perfectly centred, on every screen size.
+   - object-position: center top keeps the artwork
+     horizontally centred at all times. */
+
+.details-card-image,
+.details-flowers {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: contain;
+    object-position: center top;
+    display: block;
+}
+
+.details-flowers {
+    z-index: 2;
+}
+
+/* Edge flowers */
+
+.details-edgeflowers {
+    z-index: 3;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Invitation text */
+
+.details-content {
+    position: relative;
+    z-index: 5;
+    width: min(70%, 550px);
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    padding: 22vh 10px;
+}
+
+.invite-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(14px, 1.8vw, 20px);
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    color: #655b43;
+}
+
+.details-heading {
+    font-family: 'Playfair Display', serif;
+    color: #794a34;
+    font-size: clamp(20px, 3vw, 32px);
+    line-height: 1.2;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.children-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(14px, 2vw, 20px);
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+}
+
+.children-names {
+    font-family: 'Cormorant Garamond', serif;
+    color: #955b40;
+    font-size: clamp(20px, 3vw, 30px);
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.details-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 3vw, 28px);
+    color: #86533c;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 6px 0 2px;
+}
+
+.details-time {
+    font-size: clamp(14px, 2vw, 20px);
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #754c37;
+    margin-bottom: 12px;
+}
+
+.venue-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(15px, 2vw, 22px);
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #64563e;
+}
+
+.venue-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.5vw, 28px);
+    color: #87563c;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.venue-address {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(13px, 1.8vw, 18px);
+    color: #706047;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+.warm-regards {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(15px, 2vw, 22px);
+    letter-spacing: 1.5px;
+    color: #71543d;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.parents-names {
+    font-family: 'Cormorant Garamond', serif;
+    color: #925b42;
+    font-size: clamp(15px, 2.2vw, 24px);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+/* =====================================
+   SECTION 3 - COUNTDOWN
+===================================== */
+
+.countdown-section {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 9vh;
+}
+
+/* Background */
+
+.countdown-bg {
+    z-index: 0;
+}
+
+/* Four flowers */
+
+/* Four flowers - preserve original image proportions */
+
+/* Four Flowers - Responsive Full Section Alignment */
+
+.countdown-flowers {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    pointer-events: none;
+}
+
+/* Countdown boy and girl */
+
+.countdown-boygirl {
+    z-index: 1;
+    position: absolute;
+    bottom: -2%;
+    left: 0;
+    width: 100%;
+    height: 78%;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+/* Countdown content */
+
+.countdown-content {
+    position: relative;
+    z-index: 5;
+    width: 94%;
+    max-width: 850px;
+    text-align: center;
+}
+
+.countdown-eyebrow {
+    font-size: clamp(10px, 1.5vw, 14px);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #87664e;
+    margin-bottom: 14px;
+}
+
+.countdown-title {
+    font-family: 'Playfair Display', serif;
+    color: #714b37;
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.countdown-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    color: #826249;
+    font-size: clamp(17px, 2.5vw, 24px);
+    letter-spacing: 2px;
+    margin-top: 12px;
+}
+
+/* Timer */
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    gap: clamp(8px, 2vw, 18px);
+    margin: 28px auto 0;
+    flex-wrap: wrap;
+}
+
+.timer-box {
+    width: clamp(66px, 12vw, 105px);
+    min-height: 87px;
+    padding: 12px 5px;
+    border: 1px solid rgba(147, 111, 76, 0.4);
+    border-radius: 12px;
+    background: rgba(255, 253, 241, 0.67);
+    box-shadow: 0 8px 20px rgba(103, 79, 54, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.timer-number {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 35px);
+    font-weight: 600;
+    color: #80553c;
+}
+
+.timer-label {
+    font-size: clamp(9px, 1.4vw, 11px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #81664f;
+    margin-top: 5px;
+}
+
+.countdown-status {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(19px, 3vw, 28px);
+    color: #80543e;
+    margin-top: 20px;
+    letter-spacing: 1.5px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    position: absolute;
+    z-index: 6;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #74563e;
+    padding: 8px;
+}
+
+/* =====================================
+   REVEAL ANIMATION
+===================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    html {
+        scroll-snap-type: y proximity;
+    }
+
+    .section {
+        min-height: 100svh;
+    }
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero-content {
+        top: 12%;
+        width: 94%;
+    }
+
+    .hero-small-title {
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+    }
+
+    .hero-title {
+        font-size: clamp(32px, 8vw, 48px);
+    }
+
+    .hero-title span {
+        letter-spacing: 3px;
+        margin-top: 8px;
+    }
+
+    .hero-names {
+        margin-top: 12px;
+        letter-spacing: 2px;
+    }
+
+    .hero-divider {
+        margin: 12px auto;
+    }
+
+    .hero-subtitle {
+        letter-spacing: 1px;
+    }
+
+    .hero-topflowers {
+        height: auto;
+    }
+
+    .hero-couple {
+        height: 89%;
+        bottom: 0;
+    }
+
+    .hero-edgeflowers {
+        object-fit: cover;
+    }
+
+    .scroll-indicator {
+        bottom: 15px;
+    }
+
+    /* Details */
+
+    .details-section {
+        min-height: 100svh;
+    }
+
+    .details-card-image{
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        object-position: center;
+    }
+
+    .details-flowers {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        object-position: center top;
+    }
+
+    .details-content {
+        width: min(78%, 460px);
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 22vh 8px 18vh 8px;
+    }
+
+    .invite-intro {
+        font-size: 13px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+    .details-heading {
+        font-size: 20px;
+        margin: 8px 0;
+    }
+
+    .children-names {
+        font-size: 22px;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+    }
+
+    .details-date {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin: 4px 0 2px;
+    }
+
+    .details-time {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .warm-regards {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .venue-name {
+        font-size: 20px;
+    }
+
+    .venue-address {
+        font-size: 13px;
+    }
+
+    .parents-names {
+        font-size: 16px;
+        margin-top: 4px;
+    }
+
+    /* Countdown */
+
+    .countdown-section {
+        padding-top: 11vh;
+    }
+
+.countdown-flowers {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+
+    .countdown-boygirl {
+        height: 100%;
+        bottom: 0;
+    }
+
+    .countdown-eyebrow {
+        letter-spacing: 3px;
+    }
+
+    .timer-container {
+        gap: 7px;
+        margin-top: 22px;
+    }
+
+    .timer-box {
+        min-height: 72px;
+        padding: 9px 3px;
+        border-radius: 9px;
+    }
+
+    .countdown-status {
+        margin-top: 15px;
+    }
+
+    .footer {
+        bottom: 8px;
+        font-size: 11px;
+    }
+}
+
+/* =====================================
+   VERY SMALL MOBILE DEVICES
+===================================== */
+
+@media (max-width: 380px) {
+
+    .hero-content {
+        top: 10%;
+    }
+
+    .hero-title {
+        font-size: 31px;
+    }
+
+    .hero-names {
+        font-size: 20px;
+    }
+
+    .hero-couple {
+        height: 85%;
+    }
+
+    .details-content {
+        width: min(84%, 360px);
+        padding: 21vh 6px 16vh 6px;
+    }
+
+    .invite-intro {
+        font-size: 12px;
+    }
+
+    .details-heading {
+        font-size: 18px;
+    }
+
+    .children-text {
+        font-size: 12px;
+    }
+
+    .children-names {
+        font-size: 18px;
+    }
+
+    .details-date {
+        font-size: 18px;
+    }
+
+    .venue-name {
+        font-size: 18px;
+    }
+
+    .venue-address {
+        font-size: 12px;
+    }
+
+    .warm-regards {
+        font-size: 14px;
+    }
+
+    .parents-names {
+        font-size: 15px;
+    }
+
+    .countdown-title {
+        font-size: 29px;
+    }
+
+    .timer-box {
+        width: 64px;
+    }
+}
+
+/* =====================================
+   SHORT SCREENS (LANDSCAPE PHONES)
+===================================== */
+
+@media (max-height: 560px) {
+
+    .details-content {
+        padding: 16vh 10px 12vh 10px;
+    }
+}
+
+/* =====================================
+   REDUCED MOTION ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* ==========================================
+   SECTION 2 - TEXT SIZE & CARD ALIGNMENT
+========================================== */
+
+.details-section {
+    position: relative;
+}
+
+/* Keep all text inside the white card */
+.details-content {
+    position: absolute;
+    z-index: 5;
+
+    left: 50%;
+    top: 49%;
+    transform: translate(-50%, -50%);
+
+    width: 76%;
+    max-width: 440px;
+    min-height: 0;
+    height: auto;
+
+    padding: 0 8px;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    gap: 4px;
+}
+
+/* Preserve reveal animation without
+   overriding horizontal centering */
+.details-content.reveal {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 25px));
+}
+
+.details-content.reveal.is-visible {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+/* Invitation introduction */
+.details-content .invite-intro {
+    font-size: clamp(11px, 2.8vw, 15px);
+    line-height: 1.35;
+    letter-spacing: 0.7px;
+    margin: 0;
+}
+
+/* Main ceremony heading */
+.details-content .details-heading {
+    font-size: clamp(16px, 4.3vw, 23px);
+    line-height: 1.2;
+    margin: 5px 0;
+}
+
+/* Children description */
+.details-content .children-text {
+    font-size: clamp(11px, 2.8vw, 15px);
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Children names */
+.details-content .children-names {
+    font-size: clamp(16px, 4.2vw, 23px);
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin: 2px 0 5px;
+}
+
+/* Event date */
+.details-content .details-date {
+    font-size: clamp(16px, 4vw, 22px);
+    letter-spacing: 1.5px;
+    margin: 2px 0;
+}
+
+/* Event time */
+.details-content .details-time {
+    font-size: clamp(12px, 3.3vw, 17px);
+    letter-spacing: 3px;
+    margin: 0 0 7px;
+}
+
+/* Warm regards */
+.details-content .warm-regards {
+    font-size: clamp(12px, 3vw, 16px);
+    margin: 4px 0 0;
+}
+
+/* Parents names */
+.details-content .parents-names {
+    font-size: clamp(12px, 3.2vw, 18px);
+    line-height: 1.25;
+    letter-spacing: 0.7px;
+    margin: 0;
+}
+
+/* ==========================================
+   MOBILE DEVICES
+========================================== */
+
+@media (max-width: 768px) {
+
+    .details-content {
+        top: 49%;
+        width: 76%;
+        max-width: 370px;
+        padding: 0 5px;
+        gap: 3px;
+    }
+
+    .details-content .invite-intro {
+        font-size: 11px;
+    }
+
+    .details-content .details-heading {
+        font-size: 17px;
+        margin: 4px 0;
+    }
+
+    .details-content .children-text {
+        font-size: 11px;
+    }
+
+    .details-content .children-names {
+        font-size: 17px;
+        margin-bottom: 4px;
+    }
+
+    .details-content .details-date {
+        font-size: 17px;
+    }
+
+    .details-content .details-time {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .details-content .warm-regards {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    .details-content .parents-names {
+        font-size: 12px;
+    }
+}
+
+/* ==========================================
+   VERY SMALL MOBILE DEVICES
+========================================== */
+
+@media (max-width: 380px) {
+
+    .details-content {
+        top: 49%;
+        width: 76%;
+        gap: 2px;
+    }
+
+    .details-content .invite-intro {
+        font-size: 10px;
+    }
+
+    .details-content .details-heading {
+        font-size: 15px;
+    }
+
+    .details-content .children-text {
+        font-size: 10px;
+    }
+
+    .details-content .children-names {
+        font-size: 15px;
+    }
+
+    .details-content .details-date {
+        font-size: 15px;
+    }
+
+    .details-content .details-time {
+        font-size: 12px;
+    }
+
+    .details-content .warm-regards {
+        font-size: 11px;
+    }
+
+    .details-content .parents-names {
+        font-size: 11px;
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================
+     SECTION 1 - HERO
+===================================== -->
+
+<section class="section hero" id="home">
+
+    <!-- Background -->
+    <img
+        src="Asset/mainbg.png"
+        class="scene-layer scene-bg hero-bg"
+        alt=""
+    >
+
+    <!-- Top flowers (fourflowers used here) -->
+    <img
+        src="Asset/topflowers.png"
+        class="scene-layer hero-topflowers"
+        alt=""
+    >
+
+    <!-- Brother and sister -->
+    <img
+        src="Asset/herocouple.png"
+        class="scene-layer hero-couple"
+        alt="Brother and sister celebrating their traditional ceremony"
+    >
+
+    <!-- Edge flowers -->
+    <img
+        src="Asset/edgeflowers.png"
+        class="scene-layer hero-edgeflowers"
+        alt=""
+    >
+
+    <!-- Hero text -->
+    <div class="hero-content reveal">
+
+        <p class="hero-small-title">
+            A Day of Traditions & Blessings
+        </p>
+
+        <h1 class="hero-title">
+            Half Saree
+            <span>&</span>
+            Dhoti Ceremony
+        </h1>
+
+        <div class="hero-divider"></div>
+
+        <p class="hero-subtitle">
+            Celebrating Our Little Stars
+        </p>
+
+        <p class="hero-names">
+            Srihasya & Sushruth
+        </p>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+        Scroll to Explore
+        <div class="scroll-arrow"></div>
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     SECTION 2 - INVITATION DETAILS
+===================================== -->
+
+<section class="section details-section" id="invitation">
+
+    <!-- Background -->
+    <img
+        src="Asset/mainbg.png"
+        class="scene-layer scene-bg details-bg"
+        alt=""
+    >
+
+    <!-- Wrapper for visuals to keep them together -->
+    <div class="scene-layer details-visuals">
+        <!-- Invitation card -->
+        <img
+            src="Asset/detailscard.png"
+            class="details-card-image"
+            alt=""
+        >
+        <!-- Details flowers -->
+        <img
+            src="Asset/detailsflowers.png"
+            class="details-flowers"
+            alt=""
+        >
+    </div>
+
+    <!-- Edge flowers -->
+    <img
+        src="Asset/edgeflowers.png"
+        class="scene-layer details-edgeflowers"
+        alt=""
+    >
+
+    <!-- Invitation content -->
+    <div class="details-content reveal">
+
+        <p class="invite-intro">
+            We cordially invite you and your family
+            to grace the auspicious occasion of the
+        </p>
+
+        <h2 class="details-heading">
+            Half Saree & Dhoti Ceremony
+        </h2>
+
+        <p class="children-text">
+            of our beloved children
+        </p>
+
+        <p class="children-names">
+            Srihasya & Sushruth
+        </p>
+
+        <p class="invite-intro">
+            on Monday
+        </p>
+
+        <p class="details-date">
+            June 05 | 2023
+        </p>
+
+        <p class="details-time">
+            10 AM
+        </p>
+
+        <p class="warm-regards">
+            Warm Regards,
+        </p>
+
+        <p class="parents-names">
+            Sambasiva & Sindhu Muvva
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     SECTION 3 - COUNTDOWN
+===================================== -->
+
+<section class="section countdown-section" id="countdown">
+
+    <!-- Background -->
+    <img
+        src="Asset/mainbg.png"
+        class="scene-layer scene-bg countdown-bg"
+        alt=""
+    >
+
+    <!-- Countdown boy and girl -->
+    <img
+        src="Asset/countdownboygirl.png"
+        class="scene-layer countdown-boygirl"
+        alt="Boy and girl celebrating a special family occasion"
+    >
+
+    <!-- Four flowers -->
+    <img
+        src="Asset/fourflowers.png"
+        class="scene-layer countdown-flowers"
+        alt=""
+    >
+
+    <!-- Countdown text -->
+    <div class="countdown-content reveal">
+
+        <p class="countdown-eyebrow">
+            A Beautiful Celebration
+        </p>
+
+        <h2 class="countdown-title">
+            Let the Festivities Begin!
+        </h2>
+
+        <p class="countdown-subtitle">
+            A special day filled with love, laughter and blessings.
+        </p>
+
+        <!-- Countdown timer -->
+        <div class="timer-container" id="timer">
+
+            <div class="timer-box">
+                <div class="timer-number" id="days">00</div>
+                <div class="timer-label">Days</div>
+            </div>
+
+            <div class="timer-box">
+                <div class="timer-number" id="hours">00</div>
+                <div class="timer-label">Hours</div>
+            </div>
+
+            <div class="timer-box">
+                <div class="timer-number" id="minutes">00</div>
+                <div class="timer-label">Minutes</div>
+            </div>
+
+            <div class="timer-box">
+                <div class="timer-number" id="seconds">00</div>
+                <div class="timer-label">Seconds</div>
+            </div>
+
+        </div>
+
+        <p class="countdown-status" id="countdownStatus">
+            Counting down to a beautiful celebration
+        </p>
+
+    </div>
+
+    <div class="footer">
+        With Love, Srihasya & Sushruth
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     JAVASCRIPT
+===================================== -->
+
+<script>
+
+/* =====================================
+   SCROLL REVEAL ANIMATION
+===================================== */
+
+(function () {
+
+    const revealElements = document.querySelectorAll('.reveal');
+
+    if (!('IntersectionObserver' in window)) {
+
+        revealElements.forEach(element => {
+            element.classList.add('is-visible');
+        });
+
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add('is-visible');
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.15
+        }
+
+    );
+
+    revealElements.forEach(element => {
+        observer.observe(element);
+    });
+
+})();
+
+
+/* =====================================
+   COUNTDOWN TIMER
+===================================== */
+
+/*
+   Original invitation date:
+   June 05, 2023 at 10:00 AM (IST)
+
+   To use a new event date, update EVENT_DATE.
+   Format: YYYY-MM-DDTHH:MM:SS+05:30
+*/
+
+const EVENT_DATE = new Date(
+    '2023-06-05T10:00:00+05:30'
+).getTime();
+
+const timer = document.getElementById('timer');
+const countdownStatus = document.getElementById(
+    'countdownStatus'
+);
+
+const daysElement = document.getElementById('days');
+const hoursElement = document.getElementById('hours');
+const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
+
+
+function updateCountdown() {
+
+    const now = Date.now();
+    const difference = EVENT_DATE - now;
+
+    if (difference <= 0) {
+
+        /*
+           The uploaded invitation contains a past date.
+           Hide the timer instead of showing negative values.
+        */
+
+        timer.style.display = 'none';
+
+        countdownStatus.textContent =
+            'A beautiful celebration, cherished forever!';
+
+        return;
+    }
+
+    const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+    );
+
+    const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+    );
+
+    const seconds = Math.floor(
+        (difference / 1000) % 60
+    );
+
+    daysElement.textContent = String(days).padStart(2, '0');
+    hoursElement.textContent = String(hours).padStart(2, '0');
+    minutesElement.textContent = String(minutes).padStart(2, '0');
+    secondsElement.textContent = String(seconds).padStart(2, '0');
+
+}
+
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+</script>
+
+</body>
+</html>
